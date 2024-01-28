@@ -38,3 +38,22 @@ Please replace `dev`, `qa`, and `uat` with your actual workspace names. Also, en
 
 
 
+
+If you have separate `.tfvars` files for different environments, you can specify the appropriate file when running the `terraform apply` command using the `-var-file` option. Here's how you can do it for `dev`, `qa`, and `uat` environments:
+
+- For `dev` environment:
+    1. Select the `dev` workspace: `terraform workspace select dev`
+    2. Apply the configuration: `terraform apply -var-file=dev.tfvars`
+
+- For `qa` environment:
+    1. Select the `qa` workspace: `terraform workspace select qa`
+    2. Apply the configuration: `terraform apply -var-file=qa.tfvars`
+
+- For `uat` environment:
+    1. Select the `uat` workspace: `terraform workspace select uat`
+    2. Apply the configuration: `terraform apply -var-file=uat.tfvars`
+
+This way, Terraform will use the variables defined in the specified `.tfvars` file for the current workspace. Please replace `dev.tfvars`, `qa.tfvars`, and `uat.tfvars` with your actual `.tfvars` file paths if they're not in the same directory as your Terraform configuration files. Also, ensure you're in the correct directory where your Terraform configuration files are located before running these commands. Remember, most Terraform commands only interact with the currently selected workspace. This includes provisioning and state manipulation. So, be careful while selecting workspaces.
+
+
+
