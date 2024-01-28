@@ -1,0 +1,12 @@
+Terraform workspaces refer to separate instances of state data inside the same Terraform working directory¹. Here are some of the key commands related to Terraform workspaces:
+
+- `terraform workspace new <name>`: Creates a new workspace³.
+- `terraform workspace select <name>`: Selects an existing workspace³.
+- `terraform workspace list`: Lists all available workspaces³.
+- `terraform workspace show`: Shows the currently selected workspace³.
+- `terraform workspace delete <name>`: Deletes an existing workspace³.
+
+Remember, for a given working directory, you can only select one workspace at a time¹.
+Most Terraform commands only interact with the currently selected workspace¹. 
+This includes provisioning and state manipulation¹..
+
