@@ -5,7 +5,10 @@ NOTE –
 	Terraform workspaces are like separate folders for your infrastructure. 
 They let you manage different sets of resources (like cloud servers) using the same Terraform configuration, but keep them independent.
  Think of it like having separate playbooks for development, staging, and production environments.
-              So, you can use one Terraform codebase to create different versions of your infrastructure without accidentally messing things up in another environment. Simple and neat!
+              So, you can use one Terraform codebase to create different versions of your infrastructure without accidentally messing 
+things up in another environment. Simple and neat!
+
+NOTE - Separate ‘terraform.tfstate’ file will create for each environment.
 
 terraform workspace new <name>  : Creates a new workspace
 terraform workspace select <name>   : Selects an existing workspace
