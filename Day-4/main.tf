@@ -8,7 +8,7 @@ resource "aws_instance" "abhishek" {
   subnet_id = "subnet-019ea91ed9b5252e7" # change this
 }
 
-resource "aws_s3_bucket" "s3_bucket" {
+resource "aws_s3_bucket" "s3_bucket" {  #first create s3 bucket and dynamodb able and  then execute backend.tf file..
   bucket = "abhishek-s3-demo-xyz" # change this
 }
 
