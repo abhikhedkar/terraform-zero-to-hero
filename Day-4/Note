@@ -1,0 +1,1 @@
+First create s3 bucket and dynamo db table and  then execute backend.tf file..
